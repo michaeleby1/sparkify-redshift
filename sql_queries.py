@@ -270,8 +270,6 @@ time_table_insert = """
 
 # QUERY LISTS
 
-### QUERY LISTS ###
-
 create_table_queries = [
     staging_events_table_create,
     staging_songs_table_create,
