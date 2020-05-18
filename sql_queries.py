@@ -1,11 +1,17 @@
 import configparser
 
 
-# CONFIG
+###########################
+# CONFIG                  #
+###########################
+
 config = configparser.ConfigParser()
 config.read('dwh.cfg')
 
-# DROP TABLES
+
+###########################
+# DROP TABLES             #
+###########################
 
 staging_events_table_drop = "DROP TABLE IF EXISTS staging_events"
 staging_songs_table_drop = "DROP TABLE IF EXISTS staging_songs"
@@ -15,7 +21,10 @@ song_table_drop = "DROP TABLE IF EXISTS songs"
 artist_table_drop = "DROP TABLE IF EXISTS artists"
 time_table_drop = "DROP TABLE IF EXISTS time"
 
-# CREATE TABLES
+
+###########################
+# CREATE TABLES           #
+###########################
 
 staging_events_table_create= ("""
     CREATE TABLE IF NOT EXISTS 
@@ -118,7 +127,10 @@ time_table_create = ("""
         )
 """)
 
-# STAGING TABLES
+
+###########################
+# STAGING TABLES          #
+###########################
 
 staging_events_copy = f"""
     COPY
@@ -146,7 +158,10 @@ staging_songs_copy = f"""
       'auto'
 """
 
-# FINAL TABLES
+
+###########################
+# FINAL TABLES            #
+###########################
 
 songplay_table_insert = """
     INSERT INTO
@@ -268,7 +283,10 @@ time_table_insert = """
       ) s
 """
 
-# QUERY LISTS
+
+###########################
+# QUERY LISTS             #
+###########################
 
 create_table_queries = [
     staging_events_table_create,
