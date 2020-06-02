@@ -8,7 +8,7 @@ I want to model these two datasets as a star schema to store on a Redshift clust
 
 2. It will allow for horizontal scalability of the data.
 
-3. It will provide MPP (massive parallel processing), which parallelizes the execution of a single queries. 
+3. It will provide MPP (massive parallel processing), which parallelizes the execution of single queries. 
 
 ## Database Schema
 
