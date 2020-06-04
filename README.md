@@ -21,4 +21,4 @@ This process can be replicated by running the below two scripts:
 - <b>create_tables.py</b>: This script connects to the Redshift cluster and creates the fact table and four dimension tables via the <b>sql_queries.py</b> file.
 - <b>etl.py</b>: This script connects to the cluster, extracts and copies the two datasets from the S3 buckets into staging tables, and transfoms and loads the data into the cluster according to the schema—also via the <b>sql_queries.py</b> file.
 
-Redshift's Query Editor can be used to query the data.
+Redshift's Query Editor can be used to query the data. You will need to make your own `config` file.
